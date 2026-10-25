@@ -1,0 +1,203 @@
+﻿@model IEnumerable<PAP.DataAccess.Customer>
+@using PAP.Mvc.Helpers
+
+@{
+    ViewBag.Title = "Clientes";
+    var rows = Model?.ToList() ?? new List<PAP.DataAccess.Customer>();
+}
+
+<main>
+    <div class="d-flex justify-content-between align-items-center mb-4 flex-wrap gap-2">
+        <div>
+            <h1 class="h2 mb-1">Clientes</h1>
+            <p class="text-muted mb-0">@rows.Count registro@(rows.Count == 1 ? "" : "s")</p>
+        </div>
+        <div class="d-flex align-items-center gap-2">
+            <input type="search" id="crudFilter" class="form-control form-control-sm" placeholder="Filtrar..." />
+            <button type="button" class="btn btn-primary btn-sm" data-crud="create">Nuevo</button>
+        </div>
+    </div>
+
+    <div class="table-responsive">
+        <table class="table table-striped table-hover align-middle" id="crudTable">
+            <thead class="table-dark">
+                <tr>
+                        <th scope="col">Id</th>
+                        <th scope="col">Nombre</th>
+                        <th scope="col">Correo</th>
+                        <th scope="col">Telefono</th>
+                        <th scope="col">Estado</th>
+                        <th scope="col">Creado</th>
+                    <th scope="col" class="text-center">Editar</th>
+                    <th scope="col" class="text-center">Eliminar</th>
+                    <th scope="col" class="text-center">Detalle</th>
+                </tr>
+            </thead>
+            <tbody>
+                @if (!rows.Any())
+                {
+                    <tr>
+                        <td colspan="9" class="text-center text-muted py-4">No hay registros.</td>
+                    </tr>
+                }
+                @foreach (var x in rows)
+                {
+                    var item = new
+            {
+                Id = x.Id,
+                FirstName = x.FirstName,
+                LastName = x.LastName,
+                Email = x.Email,
+                Phone = x.Phone,
+                BirthDate = Fmt.Date(x.BirthDate),
+                IsActive = x.IsActive,
+                CreatedAt = Fmt.DateTimeLocal(x.CreatedAt),
+                UpdatedAt = Fmt.DateTimeLocal(x.UpdatedAt),
+                __keys = new { id = x.Id }
+            };
+                    <tr data-item="@(Newtonsoft.Json.JsonConvert.SerializeObject(item))">
+                    <td>@(x.Id)</td>
+                    <td>@(x.FirstName + " " + x.LastName)</td>
+                    <td>@(x.Email)</td>
+                    <td>@(Fmt.Dash(x.Phone))</td>
+                    <td>@if (x.IsActive) { <span class="badge text-bg-success">Activo</span> } else { <span class="badge text-bg-secondary">Inactivo</span> }</td>
+                    <td>@(Fmt.Pretty(x.CreatedAt))</td>
+                        <td class="text-center"><button type="button" class="btn btn-outline-primary btn-sm" data-crud="edit">Editar</button></td>
+                        <td class="text-center"><button type="button" class="btn btn-outline-danger btn-sm" data-crud="delete">Eliminar</button></td>
+                        <td class="text-center"><button type="button" class="btn btn-outline-info btn-sm" data-crud="detail">Detalle</button></td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</main>
+
+<div class="modal fade" id="createModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-scrollable">
+        <div class="modal-content">
+            @using (Html.BeginForm("Create", "Customers", FormMethod.Post, new { id = "createModalForm" }))
+            {
+                @Html.AntiForgeryToken()
+                <div class="modal-header">
+                    <h5 class="modal-title" id="createModalTitle">Nuevo registro: Cliente</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row g-3">
+            <div class="col-md-6">
+                <label class="form-label" for="create_FirstName">Nombre <span class="text-danger">*</span></label>
+                <input type="text" class="form-control" id="create_FirstName" name="FirstName" maxlength="100" required />
+            </div>
+            <div class="col-md-6">
+                <label class="form-label" for="create_LastName">Apellido <span class="text-danger">*</span></label>
+                <input type="text" class="form-control" id="create_LastName" name="LastName" maxlength="100" required />
+            </div>
+            <div class="col-md-6">
+                <label class="form-label" for="create_Email">Correo <span class="text-danger">*</span></label>
+                <input type="email" class="form-control" id="create_Email" name="Email" maxlength="150" required />
+            </div>
+            <div class="col-md-6">
+                <label class="form-label" for="create_Phone">Telefono</label>
+                <input type="text" class="form-control" id="create_Phone" name="Phone" maxlength="30" />
+            </div>
+            <div class="col-md-6">
+                <label class="form-label" for="create_BirthDate">Fecha de nacimiento</label>
+                <input type="date" class="form-control" id="create_BirthDate" name="BirthDate" />
+            </div>
+            <div class="col-md-6">
+                <div class="form-check mt-4">
+                    <input class="form-check-input" type="checkbox" id="create_IsActive" name="IsActive" value="true" checked />
+                    <label class="form-check-label" for="create_IsActive">Activo</label>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <label class="form-label" for="create_password">Contrasena <span class="text-danger">*</span></label>
+                <input type="password" class="form-control" id="create_password" name="password" maxlength="100" required autocomplete="new-password" />
+            </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-outline-dark" data-bs-dismiss="modal">Cancelar</button>
+                    <button type="submit" class="btn btn-primary">Guardar</button>
+                </div>
+            }
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="editModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-scrollable">
+        <div class="modal-content">
+            @using (Html.BeginForm("Edit", "Customers", FormMethod.Post, new { id = "editModalForm" }))
+            {
+                @Html.AntiForgeryToken()
+                <div class="modal-header">
+                    <h5 class="modal-title" id="editModalTitle">Editar cliente</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body">
+            <input type="hidden" id="edit_Id" name="Id" />
+                    <div class="row g-3">
+            <div class="col-md-6">
+                <label class="form-label" for="edit_FirstName">Nombre <span class="text-danger">*</span></label>
+                <input type="text" class="form-control" id="edit_FirstName" name="FirstName" maxlength="100" required />
+            </div>
+            <div class="col-md-6">
+                <label class="form-label" for="edit_LastName">Apellido <span class="text-danger">*</span></label>
+                <input type="text" class="form-control" id="edit_LastName" name="LastName" maxlength="100" required />
+            </div>
+            <div class="col-md-6">
+                <label class="form-label" for="edit_Email">Correo <span class="text-danger">*</span></label>
+                <input type="email" class="form-control" id="edit_Email" name="Email" maxlength="150" required />
+            </div>
+            <div class="col-md-6">
+                <label class="form-label" for="edit_Phone">Telefono</label>
+                <input type="text" class="form-control" id="edit_Phone" name="Phone" maxlength="30" />
+            </div>
+            <div class="col-md-6">
+                <label class="form-label" for="edit_BirthDate">Fecha de nacimiento</label>
+                <input type="date" class="form-control" id="edit_BirthDate" name="BirthDate" />
+            </div>
+            <div class="col-md-6">
+                <div class="form-check mt-4">
+                    <input class="form-check-input" type="checkbox" id="edit_IsActive" name="IsActive" value="true" />
+                    <label class="form-check-label" for="edit_IsActive">Activo</label>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <label class="form-label" for="edit_password">Contrasena (dejar vacia para conservar la actual)</label>
+                <input type="password" class="form-control" id="edit_password" name="password" maxlength="100" autocomplete="new-password" />
+            </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-outline-dark" data-bs-dismiss="modal">Cancelar</button>
+                    <button type="submit" class="btn btn-primary">Guardar</button>
+                </div>
+            }
+        </div>
+    </div>
+</div>
+
+@Html.Partial("_DetailModal")
+@Html.Partial("_DeleteModal")
+
+@section scripts {
+    @Scripts.Render("~/bundles/crud")
+    <script>
+        Crud.init({
+            title: 'Cliente',
+            detail: [
+                { key: 'Id', label: 'Id', type: 'text' },
+                { key: 'FirstName', label: 'Nombre', type: 'text' },
+                { key: 'LastName', label: 'Apellido', type: 'text' },
+                { key: 'Email', label: 'Correo', type: 'text' },
+                { key: 'Phone', label: 'Telefono', type: 'text' },
+                { key: 'BirthDate', label: 'Fecha de nacimiento', type: 'text' },
+                { key: 'IsActive', label: 'Activo', type: 'bool' },
+                { key: 'CreatedAt', label: 'Creado', type: 'datetime' },
+                { key: 'UpdatedAt', label: 'Actualizado', type: 'datetime' }
+            ]
+        });
+    </script>
+}

@@ -1,0 +1,357 @@
+﻿@model IEnumerable<PAP.DataAccess.Book>
+@using PAP.Mvc.Helpers
+
+@{
+    ViewBag.Title = "Libros";
+    var rows = Model?.ToList() ?? new List<PAP.DataAccess.Book>();
+    var publishersOptions = (IEnumerable<SelectListItem>)ViewBag.PublishersOptions;
+    var categoriesOptions = (IEnumerable<SelectListItem>)ViewBag.CategoriesOptions;
+    var genresOptions = (IEnumerable<SelectListItem>)ViewBag.GenresOptions;
+}
+
+<main>
+    <div class="d-flex justify-content-between align-items-center mb-4 flex-wrap gap-2">
+        <div>
+            <h1 class="h2 mb-1">Libros</h1>
+            <p class="text-muted mb-0">@rows.Count registro@(rows.Count == 1 ? "" : "s")</p>
+        </div>
+        <div class="d-flex align-items-center gap-2">
+            <input type="search" id="crudFilter" class="form-control form-control-sm" placeholder="Filtrar..." />
+            <button type="button" class="btn btn-primary btn-sm" data-crud="create">Nuevo</button>
+        </div>
+    </div>
+
+    <div class="table-responsive">
+        <table class="table table-striped table-hover align-middle" id="crudTable">
+            <thead class="table-dark">
+                <tr>
+                        <th scope="col">Id</th>
+                        <th scope="col">Titulo</th>
+                        <th scope="col">Autor</th>
+                        <th scope="col">ISBN</th>
+                        <th scope="col">Editorial</th>
+                        <th scope="col">Categoria</th>
+                        <th scope="col">Genero</th>
+                        <th scope="col">Precio</th>
+                        <th scope="col">Estado</th>
+                    <th scope="col" class="text-center">Editar</th>
+                    <th scope="col" class="text-center">Eliminar</th>
+                    <th scope="col" class="text-center">Detalle</th>
+                </tr>
+            </thead>
+            <tbody>
+                @if (!rows.Any())
+                {
+                    <tr>
+                        <td colspan="12" class="text-center text-muted py-4">No hay registros.</td>
+                    </tr>
+                }
+                @foreach (var x in rows)
+                {
+                    var item = new
+            {
+                Id = x.Id,
+                Title = x.Title,
+                Name = x.Name,
+                Author = x.Author,
+                Description = x.Description,
+                PublicationDate = Fmt.Date(x.PublicationDate),
+                Height = x.Height,
+                Width = x.Width,
+                Price = x.Price,
+                IsBestSeller = x.IsBestSeller,
+                IsInStock = x.IsInStock,
+                PublisherId = x.PublisherId,
+                PublisherIdText = (x.Publisher1 == null ? "" : x.Publisher1.Name),
+                CategoryId = x.CategoryId,
+                CategoryIdText = (x.Category1 == null ? "" : x.Category1.Name),
+                GenreId = x.GenreId,
+                GenreIdText = (x.Genre1 == null ? "" : x.Genre1.Name),
+                ISBN = x.ISBN,
+                Pages = x.Pages,
+                Language = x.Language,
+                CoverImageUrl = x.CoverImageUrl,
+                CreatedAt = Fmt.DateTimeLocal(x.CreatedAt),
+                UpdatedAt = Fmt.DateTimeLocal(x.UpdatedAt),
+                __keys = new { id = x.Id }
+            };
+                    <tr data-item="@(Newtonsoft.Json.JsonConvert.SerializeObject(item))">
+                    <td>@(x.Id)</td>
+                    <td><div class="fw-semibold">@(x.Title)</div>@if (x.IsBestSeller) { <span class="badge text-bg-warning">Best seller</span> }</td>
+                    <td>@(Fmt.Dash(x.Author))</td>
+                    <td>@(Fmt.Dash(x.ISBN))</td>
+                    <td>@(x.Publisher1 != null ? x.Publisher1.Name : Fmt.Dash(x.Publisher))</td>
+                    <td>@(x.Category1 != null ? x.Category1.Name : Fmt.Dash(x.Category))</td>
+                    <td>@(x.Genre1 != null ? x.Genre1.Name : Fmt.Dash(x.Genre))</td>
+                    <td>@(x.Price.ToString("C"))</td>
+                    <td>@if (x.IsInStock) { <span class="badge text-bg-success">En stock</span> } else { <span class="badge text-bg-secondary">Agotado</span> }</td>
+                        <td class="text-center"><button type="button" class="btn btn-outline-primary btn-sm" data-crud="edit">Editar</button></td>
+                        <td class="text-center"><button type="button" class="btn btn-outline-danger btn-sm" data-crud="delete">Eliminar</button></td>
+                        <td class="text-center"><button type="button" class="btn btn-outline-info btn-sm" data-crud="detail">Detalle</button></td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</main>
+
+<div class="modal fade" id="createModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-scrollable">
+        <div class="modal-content">
+            @using (Html.BeginForm("Create", "Books", FormMethod.Post, new { id = "createModalForm" }))
+            {
+                @Html.AntiForgeryToken()
+                <div class="modal-header">
+                    <h5 class="modal-title" id="createModalTitle">Nuevo registro: Libro</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row g-3">
+            <div class="col-md-6">
+                <label class="form-label" for="create_Title">Titulo <span class="text-danger">*</span></label>
+                <input type="text" class="form-control" id="create_Title" name="Title" maxlength="200" required />
+            </div>
+            <div class="col-md-6">
+                <label class="form-label" for="create_Name">Nombre interno (si se deja vacio usa el titulo)</label>
+                <input type="text" class="form-control" id="create_Name" name="Name" maxlength="200" />
+            </div>
+            <div class="col-md-6">
+                <label class="form-label" for="create_Author">Autor (texto)</label>
+                <input type="text" class="form-control" id="create_Author" name="Author" maxlength="200" />
+            </div>
+            <div class="col-12">
+                <label class="form-label" for="create_Description">Descripcion</label>
+                <textarea class="form-control" id="create_Description" name="Description" rows="3"></textarea>
+            </div>
+            <div class="col-md-6">
+                <label class="form-label" for="create_PublicationDate">Fecha de publicacion</label>
+                <input type="date" class="form-control" id="create_PublicationDate" name="PublicationDate" />
+            </div>
+            <div class="col-md-6">
+                <label class="form-label" for="create_Height">Alto</label>
+                <input type="number" class="form-control" id="create_Height" name="Height" step="0.01" min="0" />
+            </div>
+            <div class="col-md-6">
+                <label class="form-label" for="create_Width">Ancho</label>
+                <input type="number" class="form-control" id="create_Width" name="Width" step="0.01" min="0" />
+            </div>
+            <div class="col-md-6">
+                <label class="form-label" for="create_Price">Precio <span class="text-danger">*</span></label>
+                <input type="number" class="form-control" id="create_Price" name="Price" step="0.01" min="0" required />
+            </div>
+            <div class="col-md-6">
+                <div class="form-check mt-4">
+                    <input class="form-check-input" type="checkbox" id="create_IsBestSeller" name="IsBestSeller" value="true" />
+                    <label class="form-check-label" for="create_IsBestSeller">Best seller</label>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-check mt-4">
+                    <input class="form-check-input" type="checkbox" id="create_IsInStock" name="IsInStock" value="true" checked />
+                    <label class="form-check-label" for="create_IsInStock">En stock</label>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <label class="form-label" for="create_PublisherId">Editorial</label>
+                <select class="form-select" id="create_PublisherId" name="PublisherId">
+                    <option value="">-- Seleccione --</option>
+                    @foreach (var o in publishersOptions)
+                    {
+                        <option value="@o.Value">@o.Text</option>
+                    }
+                </select>
+            </div>
+            <div class="col-md-6">
+                <label class="form-label" for="create_CategoryId">Categoria</label>
+                <select class="form-select" id="create_CategoryId" name="CategoryId">
+                    <option value="">-- Seleccione --</option>
+                    @foreach (var o in categoriesOptions)
+                    {
+                        <option value="@o.Value">@o.Text</option>
+                    }
+                </select>
+            </div>
+            <div class="col-md-6">
+                <label class="form-label" for="create_GenreId">Genero</label>
+                <select class="form-select" id="create_GenreId" name="GenreId">
+                    <option value="">-- Seleccione --</option>
+                    @foreach (var o in genresOptions)
+                    {
+                        <option value="@o.Value">@o.Text</option>
+                    }
+                </select>
+            </div>
+            <div class="col-md-6">
+                <label class="form-label" for="create_ISBN">ISBN</label>
+                <input type="text" class="form-control" id="create_ISBN" name="ISBN" maxlength="20" />
+            </div>
+            <div class="col-md-6">
+                <label class="form-label" for="create_Pages">Paginas</label>
+                <input type="number" class="form-control" id="create_Pages" name="Pages" step="1" min="1" />
+            </div>
+            <div class="col-md-6">
+                <label class="form-label" for="create_Language">Idioma</label>
+                <input type="text" class="form-control" id="create_Language" name="Language" maxlength="50" />
+            </div>
+            <div class="col-md-6">
+                <label class="form-label" for="create_CoverImageUrl">URL de portada</label>
+                <input type="text" class="form-control" id="create_CoverImageUrl" name="CoverImageUrl" maxlength="500" />
+            </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-outline-dark" data-bs-dismiss="modal">Cancelar</button>
+                    <button type="submit" class="btn btn-primary">Guardar</button>
+                </div>
+            }
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="editModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-scrollable">
+        <div class="modal-content">
+            @using (Html.BeginForm("Edit", "Books", FormMethod.Post, new { id = "editModalForm" }))
+            {
+                @Html.AntiForgeryToken()
+                <div class="modal-header">
+                    <h5 class="modal-title" id="editModalTitle">Editar libro</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body">
+            <input type="hidden" id="edit_Id" name="Id" />
+                    <div class="row g-3">
+            <div class="col-md-6">
+                <label class="form-label" for="edit_Title">Titulo <span class="text-danger">*</span></label>
+                <input type="text" class="form-control" id="edit_Title" name="Title" maxlength="200" required />
+            </div>
+            <div class="col-md-6">
+                <label class="form-label" for="edit_Name">Nombre interno (si se deja vacio usa el titulo)</label>
+                <input type="text" class="form-control" id="edit_Name" name="Name" maxlength="200" />
+            </div>
+            <div class="col-md-6">
+                <label class="form-label" for="edit_Author">Autor (texto)</label>
+                <input type="text" class="form-control" id="edit_Author" name="Author" maxlength="200" />
+            </div>
+            <div class="col-12">
+                <label class="form-label" for="edit_Description">Descripcion</label>
+                <textarea class="form-control" id="edit_Description" name="Description" rows="3"></textarea>
+            </div>
+            <div class="col-md-6">
+                <label class="form-label" for="edit_PublicationDate">Fecha de publicacion</label>
+                <input type="date" class="form-control" id="edit_PublicationDate" name="PublicationDate" />
+            </div>
+            <div class="col-md-6">
+                <label class="form-label" for="edit_Height">Alto</label>
+                <input type="number" class="form-control" id="edit_Height" name="Height" step="0.01" min="0" />
+            </div>
+            <div class="col-md-6">
+                <label class="form-label" for="edit_Width">Ancho</label>
+                <input type="number" class="form-control" id="edit_Width" name="Width" step="0.01" min="0" />
+            </div>
+            <div class="col-md-6">
+                <label class="form-label" for="edit_Price">Precio <span class="text-danger">*</span></label>
+                <input type="number" class="form-control" id="edit_Price" name="Price" step="0.01" min="0" required />
+            </div>
+            <div class="col-md-6">
+                <div class="form-check mt-4">
+                    <input class="form-check-input" type="checkbox" id="edit_IsBestSeller" name="IsBestSeller" value="true" />
+                    <label class="form-check-label" for="edit_IsBestSeller">Best seller</label>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-check mt-4">
+                    <input class="form-check-input" type="checkbox" id="edit_IsInStock" name="IsInStock" value="true" />
+                    <label class="form-check-label" for="edit_IsInStock">En stock</label>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <label class="form-label" for="edit_PublisherId">Editorial</label>
+                <select class="form-select" id="edit_PublisherId" name="PublisherId">
+                    <option value="">-- Seleccione --</option>
+                    @foreach (var o in publishersOptions)
+                    {
+                        <option value="@o.Value">@o.Text</option>
+                    }
+                </select>
+            </div>
+            <div class="col-md-6">
+                <label class="form-label" for="edit_CategoryId">Categoria</label>
+                <select class="form-select" id="edit_CategoryId" name="CategoryId">
+                    <option value="">-- Seleccione --</option>
+                    @foreach (var o in categoriesOptions)
+                    {
+                        <option value="@o.Value">@o.Text</option>
+                    }
+                </select>
+            </div>
+            <div class="col-md-6">
+                <label class="form-label" for="edit_GenreId">Genero</label>
+                <select class="form-select" id="edit_GenreId" name="GenreId">
+                    <option value="">-- Seleccione --</option>
+                    @foreach (var o in genresOptions)
+                    {
+                        <option value="@o.Value">@o.Text</option>
+                    }
+                </select>
+            </div>
+            <div class="col-md-6">
+                <label class="form-label" for="edit_ISBN">ISBN</label>
+                <input type="text" class="form-control" id="edit_ISBN" name="ISBN" maxlength="20" />
+            </div>
+            <div class="col-md-6">
+                <label class="form-label" for="edit_Pages">Paginas</label>
+                <input type="number" class="form-control" id="edit_Pages" name="Pages" step="1" min="1" />
+            </div>
+            <div class="col-md-6">
+                <label class="form-label" for="edit_Language">Idioma</label>
+                <input type="text" class="form-control" id="edit_Language" name="Language" maxlength="50" />
+            </div>
+            <div class="col-md-6">
+                <label class="form-label" for="edit_CoverImageUrl">URL de portada</label>
+                <input type="text" class="form-control" id="edit_CoverImageUrl" name="CoverImageUrl" maxlength="500" />
+            </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-outline-dark" data-bs-dismiss="modal">Cancelar</button>
+                    <button type="submit" class="btn btn-primary">Guardar</button>
+                </div>
+            }
+        </div>
+    </div>
+</div>
+
+@Html.Partial("_DetailModal")
+@Html.Partial("_DeleteModal")
+
+@section scripts {
+    @Scripts.Render("~/bundles/crud")
+    <script>
+        Crud.init({
+            title: 'Libro',
+            detail: [
+                { key: 'Id', label: 'Id', type: 'text' },
+                { key: 'Title', label: 'Titulo', type: 'text' },
+                { key: 'Name', label: 'Nombre interno (si se deja vacio usa el titulo)', type: 'text' },
+                { key: 'Author', label: 'Autor (texto)', type: 'text' },
+                { key: 'Description', label: 'Descripcion', type: 'text' },
+                { key: 'PublicationDate', label: 'Fecha de publicacion', type: 'text' },
+                { key: 'Height', label: 'Alto', type: 'money' },
+                { key: 'Width', label: 'Ancho', type: 'money' },
+                { key: 'Price', label: 'Precio', type: 'money' },
+                { key: 'IsBestSeller', label: 'Best seller', type: 'bool' },
+                { key: 'IsInStock', label: 'En stock', type: 'bool' },
+                { key: 'PublisherIdText', label: 'Editorial', type: 'text' },
+                { key: 'CategoryIdText', label: 'Categoria', type: 'text' },
+                { key: 'GenreIdText', label: 'Genero', type: 'text' },
+                { key: 'ISBN', label: 'ISBN', type: 'text' },
+                { key: 'Pages', label: 'Paginas', type: 'text' },
+                { key: 'Language', label: 'Idioma', type: 'text' },
+                { key: 'CoverImageUrl', label: 'URL de portada', type: 'text' },
+                { key: 'CreatedAt', label: 'Creado', type: 'datetime' },
+                { key: 'UpdatedAt', label: 'Actualizado', type: 'datetime' }
+            ]
+        });
+    </script>
+}

@@ -1,0 +1,6 @@
+C:\Users\Kendall\source\repos\PAP\PAP.Models\bin\Debug\PAP.Models.dll
+C:\Users\Kendall\source\repos\PAP\PAP.Models\bin\Debug\PAP.Models.pdb
+C:\Users\Kendall\source\repos\PAP\PAP.Models\obj\Debug\PAP.Models.csproj.AssemblyReference.cache
+C:\Users\Kendall\source\repos\PAP\PAP.Models\obj\Debug\PAP.Models.csproj.CoreCompileInputs.cache
+C:\Users\Kendall\source\repos\PAP\PAP.Models\obj\Debug\PAP.Models.dll
+C:\Users\Kendall\source\repos\PAP\PAP.Models\obj\Debug\PAP.Models.pdb

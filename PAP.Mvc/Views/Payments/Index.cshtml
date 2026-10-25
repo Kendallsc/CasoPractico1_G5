@@ -1,0 +1,205 @@
+﻿@model IEnumerable<PAP.DataAccess.Payment>
+@using PAP.Mvc.Helpers
+
+@{
+    ViewBag.Title = "Pagos";
+    var rows = Model?.ToList() ?? new List<PAP.DataAccess.Payment>();
+    var ordersOptions = (IEnumerable<SelectListItem>)ViewBag.OrdersOptions;
+}
+
+<main>
+    <div class="d-flex justify-content-between align-items-center mb-4 flex-wrap gap-2">
+        <div>
+            <h1 class="h2 mb-1">Pagos</h1>
+            <p class="text-muted mb-0">@rows.Count registro@(rows.Count == 1 ? "" : "s")</p>
+        </div>
+        <div class="d-flex align-items-center gap-2">
+            <input type="search" id="crudFilter" class="form-control form-control-sm" placeholder="Filtrar..." />
+            <button type="button" class="btn btn-primary btn-sm" data-crud="create">Nuevo</button>
+        </div>
+    </div>
+
+    <div class="table-responsive">
+        <table class="table table-striped table-hover align-middle" id="crudTable">
+            <thead class="table-dark">
+                <tr>
+                        <th scope="col">Id</th>
+                        <th scope="col">Orden</th>
+                        <th scope="col">Metodo</th>
+                        <th scope="col">Monto</th>
+                        <th scope="col">Fecha</th>
+                        <th scope="col">Estado</th>
+                    <th scope="col" class="text-center">Editar</th>
+                    <th scope="col" class="text-center">Eliminar</th>
+                    <th scope="col" class="text-center">Detalle</th>
+                </tr>
+            </thead>
+            <tbody>
+                @if (!rows.Any())
+                {
+                    <tr>
+                        <td colspan="9" class="text-center text-muted py-4">No hay registros.</td>
+                    </tr>
+                }
+                @foreach (var x in rows)
+                {
+                    var item = new
+            {
+                Id = x.Id,
+                OrderId = x.OrderId,
+                OrderIdText = (x.Order == null ? "" : "#" + x.Order.Id),
+                PaymentMethod = x.PaymentMethod,
+                Amount = x.Amount,
+                PaymentDate = Fmt.DateTimeLocal(x.PaymentDate),
+                Status = x.Status,
+                TransactionRef = x.TransactionRef,
+                __keys = new { id = x.Id }
+            };
+                    <tr data-item="@(Newtonsoft.Json.JsonConvert.SerializeObject(item))">
+                    <td>@(x.Id)</td>
+                    <td>@(x.Order == null ? "-" : "#" + x.Order.Id)</td>
+                    <td>@(x.PaymentMethod)</td>
+                    <td>@(x.Amount.ToString("C"))</td>
+                    <td>@(Fmt.Pretty(x.PaymentDate))</td>
+                    <td><span class="badge text-bg-secondary">@(x.Status)</span></td>
+                        <td class="text-center"><button type="button" class="btn btn-outline-primary btn-sm" data-crud="edit">Editar</button></td>
+                        <td class="text-center"><button type="button" class="btn btn-outline-danger btn-sm" data-crud="delete">Eliminar</button></td>
+                        <td class="text-center"><button type="button" class="btn btn-outline-info btn-sm" data-crud="detail">Detalle</button></td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</main>
+
+<div class="modal fade" id="createModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-scrollable">
+        <div class="modal-content">
+            @using (Html.BeginForm("Create", "Payments", FormMethod.Post, new { id = "createModalForm" }))
+            {
+                @Html.AntiForgeryToken()
+                <div class="modal-header">
+                    <h5 class="modal-title" id="createModalTitle">Nuevo registro: Pago</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row g-3">
+            <div class="col-md-6">
+                <label class="form-label" for="create_OrderId">Orden <span class="text-danger">*</span></label>
+                <select class="form-select" id="create_OrderId" name="OrderId" required>
+                    <option value="">-- Seleccione --</option>
+                    @foreach (var o in ordersOptions)
+                    {
+                        <option value="@o.Value">@o.Text</option>
+                    }
+                </select>
+            </div>
+            <div class="col-md-6">
+                <label class="form-label" for="create_PaymentMethod">Metodo de pago <span class="text-danger">*</span></label>
+                <input type="text" class="form-control" id="create_PaymentMethod" name="PaymentMethod" list="dl_create_PaymentMethod" maxlength="30" required />
+                <datalist id="dl_create_PaymentMethod"><option value="CreditCard"></option><option value="DebitCard"></option><option value="Cash"></option><option value="Transfer"></option><option value="PayPal"></option></datalist>
+            </div>
+            <div class="col-md-6">
+                <label class="form-label" for="create_Amount">Monto <span class="text-danger">*</span></label>
+                <input type="number" class="form-control" id="create_Amount" name="Amount" step="0.01" min="0" required />
+            </div>
+            <div class="col-md-6">
+                <label class="form-label" for="create_PaymentDate">Fecha de pago <span class="text-danger">*</span></label>
+                <input type="datetime-local" class="form-control" id="create_PaymentDate" name="PaymentDate" required data-default="now" />
+            </div>
+            <div class="col-md-6">
+                <label class="form-label" for="create_Status">Estado <span class="text-danger">*</span></label>
+                <input type="text" class="form-control" id="create_Status" name="Status" list="dl_create_Status" maxlength="30" required value="Completed" />
+                <datalist id="dl_create_Status"><option value="Completed"></option><option value="Pending"></option><option value="Failed"></option><option value="Refunded"></option></datalist>
+            </div>
+            <div class="col-md-6">
+                <label class="form-label" for="create_TransactionRef">Referencia de transaccion</label>
+                <input type="text" class="form-control" id="create_TransactionRef" name="TransactionRef" maxlength="100" />
+            </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-outline-dark" data-bs-dismiss="modal">Cancelar</button>
+                    <button type="submit" class="btn btn-primary">Guardar</button>
+                </div>
+            }
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="editModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-scrollable">
+        <div class="modal-content">
+            @using (Html.BeginForm("Edit", "Payments", FormMethod.Post, new { id = "editModalForm" }))
+            {
+                @Html.AntiForgeryToken()
+                <div class="modal-header">
+                    <h5 class="modal-title" id="editModalTitle">Editar pago</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body">
+            <input type="hidden" id="edit_Id" name="Id" />
+                    <div class="row g-3">
+            <div class="col-md-6">
+                <label class="form-label" for="edit_OrderId">Orden <span class="text-danger">*</span></label>
+                <select class="form-select" id="edit_OrderId" name="OrderId" required>
+                    <option value="">-- Seleccione --</option>
+                    @foreach (var o in ordersOptions)
+                    {
+                        <option value="@o.Value">@o.Text</option>
+                    }
+                </select>
+            </div>
+            <div class="col-md-6">
+                <label class="form-label" for="edit_PaymentMethod">Metodo de pago <span class="text-danger">*</span></label>
+                <input type="text" class="form-control" id="edit_PaymentMethod" name="PaymentMethod" list="dl_edit_PaymentMethod" maxlength="30" required />
+                <datalist id="dl_edit_PaymentMethod"><option value="CreditCard"></option><option value="DebitCard"></option><option value="Cash"></option><option value="Transfer"></option><option value="PayPal"></option></datalist>
+            </div>
+            <div class="col-md-6">
+                <label class="form-label" for="edit_Amount">Monto <span class="text-danger">*</span></label>
+                <input type="number" class="form-control" id="edit_Amount" name="Amount" step="0.01" min="0" required />
+            </div>
+            <div class="col-md-6">
+                <label class="form-label" for="edit_PaymentDate">Fecha de pago <span class="text-danger">*</span></label>
+                <input type="datetime-local" class="form-control" id="edit_PaymentDate" name="PaymentDate" required />
+            </div>
+            <div class="col-md-6">
+                <label class="form-label" for="edit_Status">Estado <span class="text-danger">*</span></label>
+                <input type="text" class="form-control" id="edit_Status" name="Status" list="dl_edit_Status" maxlength="30" required />
+                <datalist id="dl_edit_Status"><option value="Completed"></option><option value="Pending"></option><option value="Failed"></option><option value="Refunded"></option></datalist>
+            </div>
+            <div class="col-md-6">
+                <label class="form-label" for="edit_TransactionRef">Referencia de transaccion</label>
+                <input type="text" class="form-control" id="edit_TransactionRef" name="TransactionRef" maxlength="100" />
+            </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-outline-dark" data-bs-dismiss="modal">Cancelar</button>
+                    <button type="submit" class="btn btn-primary">Guardar</button>
+                </div>
+            }
+        </div>
+    </div>
+</div>
+
+@Html.Partial("_DetailModal")
+@Html.Partial("_DeleteModal")
+
+@section scripts {
+    @Scripts.Render("~/bundles/crud")
+    <script>
+        Crud.init({
+            title: 'Pago',
+            detail: [
+                { key: 'Id', label: 'Id', type: 'text' },
+                { key: 'OrderIdText', label: 'Orden', type: 'text' },
+                { key: 'PaymentMethod', label: 'Metodo de pago', type: 'text' },
+                { key: 'Amount', label: 'Monto', type: 'money' },
+                { key: 'PaymentDate', label: 'Fecha de pago', type: 'datetime' },
+                { key: 'Status', label: 'Estado', type: 'text' },
+                { key: 'TransactionRef', label: 'Referencia de transaccion', type: 'text' }
+            ]
+        });
+    </script>
+}

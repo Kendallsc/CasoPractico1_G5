@@ -1,0 +1,241 @@
+﻿@model IEnumerable<PAP.DataAccess.Order>
+@using PAP.Mvc.Helpers
+
+@{
+    ViewBag.Title = "Ordenes";
+    var rows = Model?.ToList() ?? new List<PAP.DataAccess.Order>();
+    var customersOptions = (IEnumerable<SelectListItem>)ViewBag.CustomersOptions;
+    var addressesOptions = (IEnumerable<SelectListItem>)ViewBag.AddressesOptions;
+}
+
+<main>
+    <div class="d-flex justify-content-between align-items-center mb-4 flex-wrap gap-2">
+        <div>
+            <h1 class="h2 mb-1">Ordenes</h1>
+            <p class="text-muted mb-0">@rows.Count registro@(rows.Count == 1 ? "" : "s")</p>
+        </div>
+        <div class="d-flex align-items-center gap-2">
+            <input type="search" id="crudFilter" class="form-control form-control-sm" placeholder="Filtrar..." />
+            <button type="button" class="btn btn-primary btn-sm" data-crud="create">Nuevo</button>
+        </div>
+    </div>
+
+    <div class="table-responsive">
+        <table class="table table-striped table-hover align-middle" id="crudTable">
+            <thead class="table-dark">
+                <tr>
+                        <th scope="col">Id</th>
+                        <th scope="col">Cliente</th>
+                        <th scope="col">Fecha</th>
+                        <th scope="col">Estado</th>
+                        <th scope="col">Subtotal</th>
+                        <th scope="col">Total</th>
+                    <th scope="col" class="text-center">Editar</th>
+                    <th scope="col" class="text-center">Eliminar</th>
+                    <th scope="col" class="text-center">Detalle</th>
+                </tr>
+            </thead>
+            <tbody>
+                @if (!rows.Any())
+                {
+                    <tr>
+                        <td colspan="9" class="text-center text-muted py-4">No hay registros.</td>
+                    </tr>
+                }
+                @foreach (var x in rows)
+                {
+                    var item = new
+            {
+                Id = x.Id,
+                CustomerId = x.CustomerId,
+                CustomerIdText = (x.Customer == null ? "" : x.Customer.FirstName + " " + x.Customer.LastName),
+                ShippingAddressId = x.ShippingAddressId,
+                ShippingAddressIdText = (x.Address == null ? "" : x.Address.Street + ", " + x.Address.City),
+                OrderDate = Fmt.DateTimeLocal(x.OrderDate),
+                Status = x.Status,
+                Subtotal = x.Subtotal,
+                TaxAmount = x.TaxAmount,
+                ShippingCost = x.ShippingCost,
+                Total = x.Total,
+                Notes = x.Notes,
+                UpdatedAt = Fmt.DateTimeLocal(x.UpdatedAt),
+                __keys = new { id = x.Id }
+            };
+                    <tr data-item="@(Newtonsoft.Json.JsonConvert.SerializeObject(item))">
+                    <td>@(x.Id)</td>
+                    <td>@(x.Customer == null ? "-" : x.Customer.FirstName + " " + x.Customer.LastName)</td>
+                    <td>@(Fmt.Pretty(x.OrderDate))</td>
+                    <td><span class="badge text-bg-secondary">@(x.Status)</span></td>
+                    <td>@(x.Subtotal.ToString("C"))</td>
+                    <td>@(x.Total.ToString("C"))</td>
+                        <td class="text-center"><button type="button" class="btn btn-outline-primary btn-sm" data-crud="edit">Editar</button></td>
+                        <td class="text-center"><button type="button" class="btn btn-outline-danger btn-sm" data-crud="delete">Eliminar</button></td>
+                        <td class="text-center"><button type="button" class="btn btn-outline-info btn-sm" data-crud="detail">Detalle</button></td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</main>
+
+<div class="modal fade" id="createModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-scrollable">
+        <div class="modal-content">
+            @using (Html.BeginForm("Create", "Orders", FormMethod.Post, new { id = "createModalForm" }))
+            {
+                @Html.AntiForgeryToken()
+                <div class="modal-header">
+                    <h5 class="modal-title" id="createModalTitle">Nuevo registro: Orden</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row g-3">
+            <div class="col-md-6">
+                <label class="form-label" for="create_CustomerId">Cliente <span class="text-danger">*</span></label>
+                <select class="form-select" id="create_CustomerId" name="CustomerId" required>
+                    <option value="">-- Seleccione --</option>
+                    @foreach (var o in customersOptions)
+                    {
+                        <option value="@o.Value">@o.Text</option>
+                    }
+                </select>
+            </div>
+            <div class="col-md-6">
+                <label class="form-label" for="create_ShippingAddressId">Direccion de envio</label>
+                <select class="form-select" id="create_ShippingAddressId" name="ShippingAddressId">
+                    <option value="">-- Seleccione --</option>
+                    @foreach (var o in addressesOptions)
+                    {
+                        <option value="@o.Value">@o.Text</option>
+                    }
+                </select>
+            </div>
+            <div class="col-md-6">
+                <label class="form-label" for="create_OrderDate">Fecha de la orden <span class="text-danger">*</span></label>
+                <input type="datetime-local" class="form-control" id="create_OrderDate" name="OrderDate" required data-default="now" />
+            </div>
+            <div class="col-md-6">
+                <label class="form-label" for="create_Status">Estado <span class="text-danger">*</span></label>
+                <input type="text" class="form-control" id="create_Status" name="Status" list="dl_create_Status" maxlength="30" required value="Pending" />
+                <datalist id="dl_create_Status"><option value="Pending"></option><option value="Paid"></option><option value="Shipped"></option><option value="Delivered"></option><option value="Cancelled"></option></datalist>
+            </div>
+            <div class="col-md-6">
+                <label class="form-label" for="create_Subtotal">Subtotal <span class="text-danger">*</span></label>
+                <input type="number" class="form-control" id="create_Subtotal" name="Subtotal" step="0.01" min="0" required />
+            </div>
+            <div class="col-md-6">
+                <label class="form-label" for="create_TaxAmount">Impuesto <span class="text-danger">*</span></label>
+                <input type="number" class="form-control" id="create_TaxAmount" name="TaxAmount" step="0.01" min="0" required value="0" />
+            </div>
+            <div class="col-md-6">
+                <label class="form-label" for="create_ShippingCost">Costo de envio <span class="text-danger">*</span></label>
+                <input type="number" class="form-control" id="create_ShippingCost" name="ShippingCost" step="0.01" min="0" required value="0" />
+            </div>
+            <div class="col-12">
+                <label class="form-label" for="create_Notes">Notas</label>
+                <textarea class="form-control" id="create_Notes" name="Notes" rows="3" maxlength="500"></textarea>
+            </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-outline-dark" data-bs-dismiss="modal">Cancelar</button>
+                    <button type="submit" class="btn btn-primary">Guardar</button>
+                </div>
+            }
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="editModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-scrollable">
+        <div class="modal-content">
+            @using (Html.BeginForm("Edit", "Orders", FormMethod.Post, new { id = "editModalForm" }))
+            {
+                @Html.AntiForgeryToken()
+                <div class="modal-header">
+                    <h5 class="modal-title" id="editModalTitle">Editar orden</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body">
+            <input type="hidden" id="edit_Id" name="Id" />
+                    <div class="row g-3">
+            <div class="col-md-6">
+                <label class="form-label" for="edit_CustomerId">Cliente <span class="text-danger">*</span></label>
+                <select class="form-select" id="edit_CustomerId" name="CustomerId" required>
+                    <option value="">-- Seleccione --</option>
+                    @foreach (var o in customersOptions)
+                    {
+                        <option value="@o.Value">@o.Text</option>
+                    }
+                </select>
+            </div>
+            <div class="col-md-6">
+                <label class="form-label" for="edit_ShippingAddressId">Direccion de envio</label>
+                <select class="form-select" id="edit_ShippingAddressId" name="ShippingAddressId">
+                    <option value="">-- Seleccione --</option>
+                    @foreach (var o in addressesOptions)
+                    {
+                        <option value="@o.Value">@o.Text</option>
+                    }
+                </select>
+            </div>
+            <div class="col-md-6">
+                <label class="form-label" for="edit_OrderDate">Fecha de la orden <span class="text-danger">*</span></label>
+                <input type="datetime-local" class="form-control" id="edit_OrderDate" name="OrderDate" required />
+            </div>
+            <div class="col-md-6">
+                <label class="form-label" for="edit_Status">Estado <span class="text-danger">*</span></label>
+                <input type="text" class="form-control" id="edit_Status" name="Status" list="dl_edit_Status" maxlength="30" required />
+                <datalist id="dl_edit_Status"><option value="Pending"></option><option value="Paid"></option><option value="Shipped"></option><option value="Delivered"></option><option value="Cancelled"></option></datalist>
+            </div>
+            <div class="col-md-6">
+                <label class="form-label" for="edit_Subtotal">Subtotal <span class="text-danger">*</span></label>
+                <input type="number" class="form-control" id="edit_Subtotal" name="Subtotal" step="0.01" min="0" required />
+            </div>
+            <div class="col-md-6">
+                <label class="form-label" for="edit_TaxAmount">Impuesto <span class="text-danger">*</span></label>
+                <input type="number" class="form-control" id="edit_TaxAmount" name="TaxAmount" step="0.01" min="0" required />
+            </div>
+            <div class="col-md-6">
+                <label class="form-label" for="edit_ShippingCost">Costo de envio <span class="text-danger">*</span></label>
+                <input type="number" class="form-control" id="edit_ShippingCost" name="ShippingCost" step="0.01" min="0" required />
+            </div>
+            <div class="col-12">
+                <label class="form-label" for="edit_Notes">Notas</label>
+                <textarea class="form-control" id="edit_Notes" name="Notes" rows="3" maxlength="500"></textarea>
+            </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-outline-dark" data-bs-dismiss="modal">Cancelar</button>
+                    <button type="submit" class="btn btn-primary">Guardar</button>
+                </div>
+            }
+        </div>
+    </div>
+</div>
+
+@Html.Partial("_DetailModal")
+@Html.Partial("_DeleteModal")
+
+@section scripts {
+    @Scripts.Render("~/bundles/crud")
+    <script>
+        Crud.init({
+            title: 'Orden',
+            detail: [
+                { key: 'Id', label: 'Id', type: 'text' },
+                { key: 'CustomerIdText', label: 'Cliente', type: 'text' },
+                { key: 'ShippingAddressIdText', label: 'Direccion de envio', type: 'text' },
+                { key: 'OrderDate', label: 'Fecha de la orden', type: 'datetime' },
+                { key: 'Status', label: 'Estado', type: 'text' },
+                { key: 'Subtotal', label: 'Subtotal', type: 'money' },
+                { key: 'TaxAmount', label: 'Impuesto', type: 'money' },
+                { key: 'ShippingCost', label: 'Costo de envio', type: 'money' },
+                { key: 'Total', label: 'Total (se calcula automaticamente)', type: 'money' },
+                { key: 'Notes', label: 'Notas', type: 'text' },
+                { key: 'UpdatedAt', label: 'Actualizado', type: 'datetime' }
+            ]
+        });
+    </script>
+}

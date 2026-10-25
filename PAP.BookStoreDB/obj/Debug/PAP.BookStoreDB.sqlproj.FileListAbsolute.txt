@@ -1,0 +1,10 @@
+C:\Users\Kendall\source\repos\PAP\PAP.BookStoreDB\bin\Debug\PAP.BookStoreDB.dacpac
+C:\Users\Kendall\source\repos\PAP\PAP.BookStoreDB\bin\Debug\PAP.BookStoreDB.dll
+C:\Users\Kendall\source\repos\PAP\PAP.BookStoreDB\bin\Debug\PAP.BookStoreDB.pdb
+C:\Users\Kendall\source\repos\PAP\PAP.BookStoreDB\obj\Debug\PAP.BookStoreDB.sqlproj.AssemblyReference.cache
+C:\Users\Kendall\source\repos\PAP\PAP.BookStoreDB\obj\Debug\Model.xml
+C:\Users\Kendall\source\repos\PAP\PAP.BookStoreDB\obj\Debug\refactor.xml
+C:\Users\Kendall\source\repos\PAP\PAP.BookStoreDB\obj\Debug\postdeploy.sql
+C:\Users\Kendall\source\repos\PAP\PAP.BookStoreDB\obj\Debug\predeploy.sql
+C:\Users\Kendall\source\repos\PAP\PAP.BookStoreDB\obj\Debug\PAP.BookStoreDB.dll
+C:\Users\Kendall\source\repos\PAP\PAP.BookStoreDB\obj\Debug\PAP.BookStoreDB.pdb

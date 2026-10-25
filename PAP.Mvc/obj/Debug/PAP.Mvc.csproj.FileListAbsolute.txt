@@ -1,0 +1,137 @@
+D:\U fidelitas\PROGRAMACION AVANZADA\comodin\PAP\PAP\PAP.Mvc\bin\PAP.Mvc.dll.config
+D:\U fidelitas\PROGRAMACION AVANZADA\comodin\PAP\PAP\PAP.Mvc\bin\PAP.Mvc.dll
+D:\U fidelitas\PROGRAMACION AVANZADA\comodin\PAP\PAP\PAP.Mvc\bin\PAP.Mvc.pdb
+D:\U fidelitas\PROGRAMACION AVANZADA\comodin\PAP\PAP\PAP.Mvc\bin\Antlr3.Runtime.dll
+D:\U fidelitas\PROGRAMACION AVANZADA\comodin\PAP\PAP\PAP.Mvc\bin\EntityFramework.dll
+D:\U fidelitas\PROGRAMACION AVANZADA\comodin\PAP\PAP\PAP.Mvc\bin\EntityFramework.SqlServer.dll
+D:\U fidelitas\PROGRAMACION AVANZADA\comodin\PAP\PAP\PAP.Mvc\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\U fidelitas\PROGRAMACION AVANZADA\comodin\PAP\PAP\PAP.Mvc\bin\Microsoft.Web.Infrastructure.dll
+D:\U fidelitas\PROGRAMACION AVANZADA\comodin\PAP\PAP\PAP.Mvc\bin\Newtonsoft.Json.dll
+D:\U fidelitas\PROGRAMACION AVANZADA\comodin\PAP\PAP\PAP.Mvc\bin\PAP.Business.dll
+D:\U fidelitas\PROGRAMACION AVANZADA\comodin\PAP\PAP\PAP.Mvc\bin\PAP.DataAccess.dll
+D:\U fidelitas\PROGRAMACION AVANZADA\comodin\PAP\PAP\PAP.Mvc\bin\PAP.Models.dll
+D:\U fidelitas\PROGRAMACION AVANZADA\comodin\PAP\PAP\PAP.Mvc\bin\System.Web.Helpers.dll
+D:\U fidelitas\PROGRAMACION AVANZADA\comodin\PAP\PAP\PAP.Mvc\bin\System.Web.Mvc.dll
+D:\U fidelitas\PROGRAMACION AVANZADA\comodin\PAP\PAP\PAP.Mvc\bin\System.Web.Optimization.dll
+D:\U fidelitas\PROGRAMACION AVANZADA\comodin\PAP\PAP\PAP.Mvc\bin\System.Web.Razor.dll
+D:\U fidelitas\PROGRAMACION AVANZADA\comodin\PAP\PAP\PAP.Mvc\bin\System.Web.WebPages.Deployment.dll
+D:\U fidelitas\PROGRAMACION AVANZADA\comodin\PAP\PAP\PAP.Mvc\bin\System.Web.WebPages.dll
+D:\U fidelitas\PROGRAMACION AVANZADA\comodin\PAP\PAP\PAP.Mvc\bin\System.Web.WebPages.Razor.dll
+D:\U fidelitas\PROGRAMACION AVANZADA\comodin\PAP\PAP\PAP.Mvc\bin\WebGrease.dll
+D:\U fidelitas\PROGRAMACION AVANZADA\comodin\PAP\PAP\PAP.Mvc\bin\PAP.Repositories.dll
+D:\U fidelitas\PROGRAMACION AVANZADA\comodin\PAP\PAP\PAP.Mvc\bin\PAP.Business.pdb
+D:\U fidelitas\PROGRAMACION AVANZADA\comodin\PAP\PAP\PAP.Mvc\bin\PAP.DataAccess.pdb
+D:\U fidelitas\PROGRAMACION AVANZADA\comodin\PAP\PAP\PAP.Mvc\bin\PAP.DataAccess.dll.config
+D:\U fidelitas\PROGRAMACION AVANZADA\comodin\PAP\PAP\PAP.Mvc\bin\PAP.Models.pdb
+D:\U fidelitas\PROGRAMACION AVANZADA\comodin\PAP\PAP\PAP.Mvc\bin\EntityFramework.xml
+D:\U fidelitas\PROGRAMACION AVANZADA\comodin\PAP\PAP\PAP.Mvc\bin\EntityFramework.SqlServer.xml
+D:\U fidelitas\PROGRAMACION AVANZADA\comodin\PAP\PAP\PAP.Mvc\bin\System.Web.Helpers.xml
+D:\U fidelitas\PROGRAMACION AVANZADA\comodin\PAP\PAP\PAP.Mvc\bin\System.Web.Mvc.xml
+D:\U fidelitas\PROGRAMACION AVANZADA\comodin\PAP\PAP\PAP.Mvc\bin\System.Web.Optimization.xml
+D:\U fidelitas\PROGRAMACION AVANZADA\comodin\PAP\PAP\PAP.Mvc\bin\System.Web.Razor.xml
+D:\U fidelitas\PROGRAMACION AVANZADA\comodin\PAP\PAP\PAP.Mvc\bin\System.Web.WebPages.xml
+D:\U fidelitas\PROGRAMACION AVANZADA\comodin\PAP\PAP\PAP.Mvc\bin\System.Web.WebPages.Deployment.xml
+D:\U fidelitas\PROGRAMACION AVANZADA\comodin\PAP\PAP\PAP.Mvc\bin\System.Web.WebPages.Razor.xml
+D:\U fidelitas\PROGRAMACION AVANZADA\comodin\PAP\PAP\PAP.Mvc\bin\Newtonsoft.Json.xml
+D:\U fidelitas\PROGRAMACION AVANZADA\comodin\PAP\PAP\PAP.Mvc\bin\Antlr3.Runtime.pdb
+D:\U fidelitas\PROGRAMACION AVANZADA\comodin\PAP\PAP\PAP.Mvc\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\U fidelitas\PROGRAMACION AVANZADA\comodin\PAP\PAP\PAP.Mvc\bin\PAP.Repositories.pdb
+D:\U fidelitas\PROGRAMACION AVANZADA\comodin\PAP\PAP\PAP.Mvc\bin\PAP.Repositories.dll.config
+D:\U fidelitas\PROGRAMACION AVANZADA\comodin\PAP\PAP\PAP.Mvc\obj\Debug\PAP.Mvc.csproj.AssemblyReference.cache
+D:\U fidelitas\PROGRAMACION AVANZADA\comodin\PAP\PAP\PAP.Mvc\obj\Debug\PAP.Mvc.csproj.CoreCompileInputs.cache
+D:\U fidelitas\PROGRAMACION AVANZADA\comodin\PAP\PAP\PAP.Mvc\obj\Debug\PAP.Mvc.csproj.Up2Date
+D:\U fidelitas\PROGRAMACION AVANZADA\comodin\PAP\PAP\PAP.Mvc\obj\Debug\PAP.Mvc.dll
+D:\U fidelitas\PROGRAMACION AVANZADA\comodin\PAP\PAP\PAP.Mvc\obj\Debug\PAP.Mvc.pdb
+C:\Users\Kendall\source\repos\PAP\PAP.Mvc\bin\PAP.Mvc.dll.config
+C:\Users\Kendall\source\repos\PAP\PAP.Mvc\bin\PAP.Mvc.dll
+C:\Users\Kendall\source\repos\PAP\PAP.Mvc\bin\PAP.Mvc.pdb
+C:\Users\Kendall\source\repos\PAP\PAP.Mvc\bin\roslyn\csc.exe
+C:\Users\Kendall\source\repos\PAP\PAP.Mvc\bin\roslyn\csc.exe.config
+C:\Users\Kendall\source\repos\PAP\PAP.Mvc\bin\roslyn\csc.rsp
+C:\Users\Kendall\source\repos\PAP\PAP.Mvc\bin\roslyn\csi.exe
+C:\Users\Kendall\source\repos\PAP\PAP.Mvc\bin\roslyn\csi.exe.config
+C:\Users\Kendall\source\repos\PAP\PAP.Mvc\bin\roslyn\csi.rsp
+C:\Users\Kendall\source\repos\PAP\PAP.Mvc\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\Kendall\source\repos\PAP\PAP.Mvc\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Kendall\source\repos\PAP\PAP.Mvc\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\Kendall\source\repos\PAP\PAP.Mvc\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\Kendall\source\repos\PAP\PAP.Mvc\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\Kendall\source\repos\PAP\PAP.Mvc\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\Kendall\source\repos\PAP\PAP.Mvc\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\Kendall\source\repos\PAP\PAP.Mvc\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\Kendall\source\repos\PAP\PAP.Mvc\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\Kendall\source\repos\PAP\PAP.Mvc\bin\roslyn\Microsoft.Managed.Core.targets
+C:\Users\Kendall\source\repos\PAP\PAP.Mvc\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\Kendall\source\repos\PAP\PAP.Mvc\bin\roslyn\Microsoft.Win32.Primitives.dll
+C:\Users\Kendall\source\repos\PAP\PAP.Mvc\bin\roslyn\System.AppContext.dll
+C:\Users\Kendall\source\repos\PAP\PAP.Mvc\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\Kendall\source\repos\PAP\PAP.Mvc\bin\roslyn\System.Console.dll
+C:\Users\Kendall\source\repos\PAP\PAP.Mvc\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+C:\Users\Kendall\source\repos\PAP\PAP.Mvc\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\Users\Kendall\source\repos\PAP\PAP.Mvc\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\Kendall\source\repos\PAP\PAP.Mvc\bin\roslyn\System.Globalization.Calendars.dll
+C:\Users\Kendall\source\repos\PAP\PAP.Mvc\bin\roslyn\System.IO.Compression.dll
+C:\Users\Kendall\source\repos\PAP\PAP.Mvc\bin\roslyn\System.IO.Compression.ZipFile.dll
+C:\Users\Kendall\source\repos\PAP\PAP.Mvc\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\Kendall\source\repos\PAP\PAP.Mvc\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\Kendall\source\repos\PAP\PAP.Mvc\bin\roslyn\System.Net.Http.dll
+C:\Users\Kendall\source\repos\PAP\PAP.Mvc\bin\roslyn\System.Net.Sockets.dll
+C:\Users\Kendall\source\repos\PAP\PAP.Mvc\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\Kendall\source\repos\PAP\PAP.Mvc\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+C:\Users\Kendall\source\repos\PAP\PAP.Mvc\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\Users\Kendall\source\repos\PAP\PAP.Mvc\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\Users\Kendall\source\repos\PAP\PAP.Mvc\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\Users\Kendall\source\repos\PAP\PAP.Mvc\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\Users\Kendall\source\repos\PAP\PAP.Mvc\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Users\Kendall\source\repos\PAP\PAP.Mvc\bin\roslyn\System.Threading.Tasks.Extensions.dll
+C:\Users\Kendall\source\repos\PAP\PAP.Mvc\bin\roslyn\System.ValueTuple.dll
+C:\Users\Kendall\source\repos\PAP\PAP.Mvc\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\Users\Kendall\source\repos\PAP\PAP.Mvc\bin\roslyn\System.Xml.XmlDocument.dll
+C:\Users\Kendall\source\repos\PAP\PAP.Mvc\bin\roslyn\System.Xml.XPath.dll
+C:\Users\Kendall\source\repos\PAP\PAP.Mvc\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\Users\Kendall\source\repos\PAP\PAP.Mvc\bin\roslyn\vbc.exe
+C:\Users\Kendall\source\repos\PAP\PAP.Mvc\bin\roslyn\vbc.exe.config
+C:\Users\Kendall\source\repos\PAP\PAP.Mvc\bin\roslyn\vbc.rsp
+C:\Users\Kendall\source\repos\PAP\PAP.Mvc\bin\roslyn\VBCSCompiler.exe
+C:\Users\Kendall\source\repos\PAP\PAP.Mvc\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\Kendall\source\repos\PAP\PAP.Mvc\bin\Antlr3.Runtime.dll
+C:\Users\Kendall\source\repos\PAP\PAP.Mvc\bin\EntityFramework.dll
+C:\Users\Kendall\source\repos\PAP\PAP.Mvc\bin\EntityFramework.SqlServer.dll
+C:\Users\Kendall\source\repos\PAP\PAP.Mvc\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Kendall\source\repos\PAP\PAP.Mvc\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Kendall\source\repos\PAP\PAP.Mvc\bin\Newtonsoft.Json.dll
+C:\Users\Kendall\source\repos\PAP\PAP.Mvc\bin\PAP.Business.dll
+C:\Users\Kendall\source\repos\PAP\PAP.Mvc\bin\PAP.DataAccess.dll
+C:\Users\Kendall\source\repos\PAP\PAP.Mvc\bin\PAP.Models.dll
+C:\Users\Kendall\source\repos\PAP\PAP.Mvc\bin\System.Web.Helpers.dll
+C:\Users\Kendall\source\repos\PAP\PAP.Mvc\bin\System.Web.Mvc.dll
+C:\Users\Kendall\source\repos\PAP\PAP.Mvc\bin\System.Web.Optimization.dll
+C:\Users\Kendall\source\repos\PAP\PAP.Mvc\bin\System.Web.Razor.dll
+C:\Users\Kendall\source\repos\PAP\PAP.Mvc\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Kendall\source\repos\PAP\PAP.Mvc\bin\System.Web.WebPages.dll
+C:\Users\Kendall\source\repos\PAP\PAP.Mvc\bin\System.Web.WebPages.Razor.dll
+C:\Users\Kendall\source\repos\PAP\PAP.Mvc\bin\WebGrease.dll
+C:\Users\Kendall\source\repos\PAP\PAP.Mvc\bin\PAP.Repositories.dll
+C:\Users\Kendall\source\repos\PAP\PAP.Mvc\bin\PAP.Business.pdb
+C:\Users\Kendall\source\repos\PAP\PAP.Mvc\bin\PAP.DataAccess.pdb
+C:\Users\Kendall\source\repos\PAP\PAP.Mvc\bin\PAP.DataAccess.dll.config
+C:\Users\Kendall\source\repos\PAP\PAP.Mvc\bin\PAP.Models.pdb
+C:\Users\Kendall\source\repos\PAP\PAP.Mvc\bin\EntityFramework.xml
+C:\Users\Kendall\source\repos\PAP\PAP.Mvc\bin\EntityFramework.SqlServer.xml
+C:\Users\Kendall\source\repos\PAP\PAP.Mvc\bin\System.Web.Helpers.xml
+C:\Users\Kendall\source\repos\PAP\PAP.Mvc\bin\System.Web.Mvc.xml
+C:\Users\Kendall\source\repos\PAP\PAP.Mvc\bin\System.Web.Optimization.xml
+C:\Users\Kendall\source\repos\PAP\PAP.Mvc\bin\System.Web.Razor.xml
+C:\Users\Kendall\source\repos\PAP\PAP.Mvc\bin\System.Web.WebPages.xml
+C:\Users\Kendall\source\repos\PAP\PAP.Mvc\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Kendall\source\repos\PAP\PAP.Mvc\bin\System.Web.WebPages.Razor.xml
+C:\Users\Kendall\source\repos\PAP\PAP.Mvc\bin\Newtonsoft.Json.xml
+C:\Users\Kendall\source\repos\PAP\PAP.Mvc\bin\Antlr3.Runtime.pdb
+C:\Users\Kendall\source\repos\PAP\PAP.Mvc\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Kendall\source\repos\PAP\PAP.Mvc\bin\PAP.Repositories.pdb
+C:\Users\Kendall\source\repos\PAP\PAP.Mvc\bin\PAP.Repositories.dll.config
+C:\Users\Kendall\source\repos\PAP\PAP.Mvc\obj\Debug\PAP.Mvc.csproj.AssemblyReference.cache
+C:\Users\Kendall\source\repos\PAP\PAP.Mvc\obj\Debug\PAP.Mvc.csproj.CoreCompileInputs.cache
+C:\Users\Kendall\source\repos\PAP\PAP.Mvc\obj\Debug\PAP.Mvc.csproj.Up2Date
+C:\Users\Kendall\source\repos\PAP\PAP.Mvc\obj\Debug\PAP.Mvc.dll
+C:\Users\Kendall\source\repos\PAP\PAP.Mvc\obj\Debug\PAP.Mvc.pdb

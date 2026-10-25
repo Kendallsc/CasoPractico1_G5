@@ -1,0 +1,17 @@
+C:\Users\Kendall\source\repos\PAP\PAP.Business\bin\Debug\PAP.Business.dll
+C:\Users\Kendall\source\repos\PAP\PAP.Business\bin\Debug\PAP.Business.pdb
+C:\Users\Kendall\source\repos\PAP\PAP.Business\bin\Debug\PAP.DataAccess.dll
+C:\Users\Kendall\source\repos\PAP\PAP.Business\bin\Debug\PAP.Models.dll
+C:\Users\Kendall\source\repos\PAP\PAP.Business\bin\Debug\PAP.Repositories.dll
+C:\Users\Kendall\source\repos\PAP\PAP.Business\bin\Debug\EntityFramework.dll
+C:\Users\Kendall\source\repos\PAP\PAP.Business\bin\Debug\PAP.DataAccess.pdb
+C:\Users\Kendall\source\repos\PAP\PAP.Business\bin\Debug\PAP.DataAccess.dll.config
+C:\Users\Kendall\source\repos\PAP\PAP.Business\bin\Debug\PAP.Models.pdb
+C:\Users\Kendall\source\repos\PAP\PAP.Business\bin\Debug\PAP.Repositories.pdb
+C:\Users\Kendall\source\repos\PAP\PAP.Business\bin\Debug\PAP.Repositories.dll.config
+C:\Users\Kendall\source\repos\PAP\PAP.Business\bin\Debug\EntityFramework.xml
+C:\Users\Kendall\source\repos\PAP\PAP.Business\obj\Debug\PAP.Business.csproj.AssemblyReference.cache
+C:\Users\Kendall\source\repos\PAP\PAP.Business\obj\Debug\PAP.Business.csproj.CoreCompileInputs.cache
+C:\Users\Kendall\source\repos\PAP\PAP.Business\obj\Debug\PAP.Busi.CD994CE7.Up2Date
+C:\Users\Kendall\source\repos\PAP\PAP.Business\obj\Debug\PAP.Business.dll
+C:\Users\Kendall\source\repos\PAP\PAP.Business\obj\Debug\PAP.Business.pdb

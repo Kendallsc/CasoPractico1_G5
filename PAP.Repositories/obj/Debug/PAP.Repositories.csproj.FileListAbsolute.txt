@@ -1,0 +1,17 @@
+C:\Users\Kendall\source\repos\PAP\PAP.Repositories\bin\Debug\PAP.Repositories.dll.config
+C:\Users\Kendall\source\repos\PAP\PAP.Repositories\bin\Debug\PAP.Repositories.dll
+C:\Users\Kendall\source\repos\PAP\PAP.Repositories\bin\Debug\PAP.Repositories.pdb
+C:\Users\Kendall\source\repos\PAP\PAP.Repositories\bin\Debug\EntityFramework.dll
+C:\Users\Kendall\source\repos\PAP\PAP.Repositories\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Kendall\source\repos\PAP\PAP.Repositories\bin\Debug\PAP.DataAccess.dll
+C:\Users\Kendall\source\repos\PAP\PAP.Repositories\bin\Debug\PAP.Models.dll
+C:\Users\Kendall\source\repos\PAP\PAP.Repositories\bin\Debug\PAP.DataAccess.pdb
+C:\Users\Kendall\source\repos\PAP\PAP.Repositories\bin\Debug\PAP.DataAccess.dll.config
+C:\Users\Kendall\source\repos\PAP\PAP.Repositories\bin\Debug\PAP.Models.pdb
+C:\Users\Kendall\source\repos\PAP\PAP.Repositories\bin\Debug\EntityFramework.xml
+C:\Users\Kendall\source\repos\PAP\PAP.Repositories\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Kendall\source\repos\PAP\PAP.Repositories\obj\Debug\PAP.Repositories.csproj.AssemblyReference.cache
+C:\Users\Kendall\source\repos\PAP\PAP.Repositories\obj\Debug\PAP.Repositories.csproj.CoreCompileInputs.cache
+C:\Users\Kendall\source\repos\PAP\PAP.Repositories\obj\Debug\PAP.Repo.F1F19405.Up2Date
+C:\Users\Kendall\source\repos\PAP\PAP.Repositories\obj\Debug\PAP.Repositories.dll
+C:\Users\Kendall\source\repos\PAP\PAP.Repositories\obj\Debug\PAP.Repositories.pdb

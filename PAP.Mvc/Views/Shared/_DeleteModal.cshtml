@@ -1,0 +1,26 @@
+﻿@*
+    Modal de confirmacion de eliminacion compartido por todas las vistas Index.
+    Crud.js agrega en #deleteKeys los inputs hidden con la llave del registro (id, o bookId + authorId).
+*@
+<div class="modal fade" id="deleteModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            @using (Html.BeginForm("Delete", (string)ViewContext.RouteData.Values["controller"], FormMethod.Post, new { id = "deleteForm" }))
+            {
+                @Html.AntiForgeryToken()
+                <div class="modal-header">
+                    <h5 class="modal-title">Confirmar eliminacion</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body">
+                    <div id="deleteKeys"></div>
+                    <p class="mb-0" id="deleteText">Seguro que desea eliminar este registro?</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-outline-dark" data-bs-dismiss="modal">Cancelar</button>
+                    <button type="submit" class="btn btn-danger">Eliminar</button>
+                </div>
+            }
+        </div>
+    </div>
+</div>

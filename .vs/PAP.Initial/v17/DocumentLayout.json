@@ -1,0 +1,239 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Kendall\\source\\repos\\PAP\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{2CFE9167-0530-473E-B3E6-749BE28634FC}|PAP.Repositories\\PAP.Repositories.csproj|c:\\users\\kendall\\source\\repos\\pap\\pap.repositories\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{2CFE9167-0530-473E-B3E6-749BE28634FC}|PAP.Repositories\\PAP.Repositories.csproj|solutionrelative:pap.repositories\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4677293E-A510-4EA3-83C5-5D6C49BDF433}|PAP.Mvc\\PAP.Mvc.csproj|c:\\users\\kendall\\source\\repos\\pap\\pap.mvc\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{4677293E-A510-4EA3-83C5-5D6C49BDF433}|PAP.Mvc\\PAP.Mvc.csproj|solutionrelative:pap.mvc\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2CFE9167-0530-473E-B3E6-749BE28634FC}|PAP.Repositories\\PAP.Repositories.csproj|c:\\users\\kendall\\source\\repos\\pap\\pap.repositories\\repositorybase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2CFE9167-0530-473E-B3E6-749BE28634FC}|PAP.Repositories\\PAP.Repositories.csproj|solutionrelative:pap.repositories\\repositorybase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B9B34359-9D35-4CB6-B78A-4534016230E5}|PAP.DataAccess\\PAP.DataAccess.csproj|C:\\Users\\Kendall\\source\\repos\\PAP\\pap.dataaccess\\author.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B9B34359-9D35-4CB6-B78A-4534016230E5}|PAP.DataAccess\\PAP.DataAccess.csproj|solutionrelative:pap.dataaccess\\author.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B9B34359-9D35-4CB6-B78A-4534016230E5}|PAP.DataAccess\\PAP.DataAccess.csproj|C:\\Users\\Kendall\\source\\repos\\PAP\\pap.dataaccess\\bookauthor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B9B34359-9D35-4CB6-B78A-4534016230E5}|PAP.DataAccess\\PAP.DataAccess.csproj|solutionrelative:pap.dataaccess\\bookauthor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B9B34359-9D35-4CB6-B78A-4534016230E5}|PAP.DataAccess\\PAP.DataAccess.csproj|C:\\Users\\Kendall\\source\\repos\\PAP\\pap.dataaccess\\book.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B9B34359-9D35-4CB6-B78A-4534016230E5}|PAP.DataAccess\\PAP.DataAccess.csproj|solutionrelative:pap.dataaccess\\book.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2CFE9167-0530-473E-B3E6-749BE28634FC}|PAP.Repositories\\PAP.Repositories.csproj|C:\\Users\\Kendall\\source\\repos\\PAP\\pap.repositories\\bookauthorrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2CFE9167-0530-473E-B3E6-749BE28634FC}|PAP.Repositories\\PAP.Repositories.csproj|solutionrelative:pap.repositories\\bookauthorrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B9B34359-9D35-4CB6-B78A-4534016230E5}|PAP.DataAccess\\PAP.DataAccess.csproj|C:\\Users\\Kendall\\source\\repos\\PAP\\pap.dataaccess\\packages.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{B9B34359-9D35-4CB6-B78A-4534016230E5}|PAP.DataAccess\\PAP.DataAccess.csproj|solutionrelative:pap.dataaccess\\packages.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2CFE9167-0530-473E-B3E6-749BE28634FC}|PAP.Repositories\\PAP.Repositories.csproj|C:\\Users\\Kendall\\source\\repos\\PAP\\pap.repositories\\inventoryrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2CFE9167-0530-473E-B3E6-749BE28634FC}|PAP.Repositories\\PAP.Repositories.csproj|solutionrelative:pap.repositories\\inventoryrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{033E721B-AF6D-4153-9F9C-CA71591BF947}|PAP.Business\\PAP.Business.csproj|C:\\Users\\Kendall\\source\\repos\\PAP\\pap.business\\bookauthormanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{033E721B-AF6D-4153-9F9C-CA71591BF947}|PAP.Business\\PAP.Business.csproj|solutionrelative:pap.business\\bookauthormanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B9B34359-9D35-4CB6-B78A-4534016230E5}|PAP.DataAccess\\PAP.DataAccess.csproj|C:\\Users\\Kendall\\source\\repos\\PAP\\pap.dataaccess\\dataaccess.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B9B34359-9D35-4CB6-B78A-4534016230E5}|PAP.DataAccess\\PAP.DataAccess.csproj|solutionrelative:pap.dataaccess\\dataaccess.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2CFE9167-0530-473E-B3E6-749BE28634FC}|PAP.Repositories\\PAP.Repositories.csproj|C:\\Users\\Kendall\\source\\repos\\PAP\\pap.repositories\\addressrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2CFE9167-0530-473E-B3E6-749BE28634FC}|PAP.Repositories\\PAP.Repositories.csproj|solutionrelative:pap.repositories\\addressrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{033E721B-AF6D-4153-9F9C-CA71591BF947}|PAP.Business\\PAP.Business.csproj|C:\\Users\\Kendall\\source\\repos\\PAP\\pap.business\\authormanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{033E721B-AF6D-4153-9F9C-CA71591BF947}|PAP.Business\\PAP.Business.csproj|solutionrelative:pap.business\\authormanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "App.config",
+              "DocumentMoniker": "C:\\Users\\Kendall\\source\\repos\\PAP\\PAP.Repositories\\App.config",
+              "RelativeDocumentMoniker": "PAP.Repositories\\App.config",
+              "ToolTip": "C:\\Users\\Kendall\\source\\repos\\PAP\\PAP.Repositories\\App.config",
+              "RelativeToolTip": "PAP.Repositories\\App.config",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
+              "WhenOpened": "2026-10-25T20:38:13.566Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Web.config",
+              "DocumentMoniker": "C:\\Users\\Kendall\\source\\repos\\PAP\\PAP.Mvc\\Web.config",
+              "RelativeDocumentMoniker": "PAP.Mvc\\Web.config",
+              "ToolTip": "C:\\Users\\Kendall\\source\\repos\\PAP\\PAP.Mvc\\Web.config",
+              "RelativeToolTip": "PAP.Mvc\\Web.config",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAADeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
+              "WhenOpened": "2026-10-25T20:36:39.441Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Book.cs",
+              "DocumentMoniker": "C:\\Users\\Kendall\\source\\repos\\PAP\\PAP.DataAccess\\Book.cs",
+              "RelativeDocumentMoniker": "PAP.DataAccess\\Book.cs",
+              "ToolTip": "C:\\Users\\Kendall\\source\\repos\\PAP\\PAP.DataAccess\\Book.cs",
+              "RelativeToolTip": "PAP.DataAccess\\Book.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACMAAAA1AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-25T20:29:19.754Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Author.cs",
+              "DocumentMoniker": "C:\\Users\\Kendall\\source\\repos\\PAP\\PAP.DataAccess\\Author.cs",
+              "RelativeDocumentMoniker": "PAP.DataAccess\\Author.cs",
+              "ToolTip": "C:\\Users\\Kendall\\source\\repos\\PAP\\PAP.DataAccess\\Author.cs",
+              "RelativeToolTip": "PAP.DataAccess\\Author.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-25T20:28:12.118Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "BookAuthor.cs",
+              "DocumentMoniker": "C:\\Users\\Kendall\\source\\repos\\PAP\\PAP.DataAccess\\BookAuthor.cs",
+              "RelativeDocumentMoniker": "PAP.DataAccess\\BookAuthor.cs",
+              "ToolTip": "C:\\Users\\Kendall\\source\\repos\\PAP\\PAP.DataAccess\\BookAuthor.cs",
+              "RelativeToolTip": "PAP.DataAccess\\BookAuthor.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-25T20:03:25.792Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "InventoryRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Kendall\\source\\repos\\PAP\\PAP.Repositories\\InventoryRepository.cs",
+              "RelativeDocumentMoniker": "PAP.Repositories\\InventoryRepository.cs",
+              "ToolTip": "C:\\Users\\Kendall\\source\\repos\\PAP\\PAP.Repositories\\InventoryRepository.cs",
+              "RelativeToolTip": "PAP.Repositories\\InventoryRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-25T20:00:01.63Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "BookAuthorManager.cs",
+              "DocumentMoniker": "C:\\Users\\Kendall\\source\\repos\\PAP\\PAP.Business\\BookAuthorManager.cs",
+              "RelativeDocumentMoniker": "PAP.Business\\BookAuthorManager.cs",
+              "ToolTip": "C:\\Users\\Kendall\\source\\repos\\PAP\\PAP.Business\\BookAuthorManager.cs",
+              "RelativeToolTip": "PAP.Business\\BookAuthorManager.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAA5AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-25T18:56:23Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "BookAuthorRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Kendall\\source\\repos\\PAP\\PAP.Repositories\\BookAuthorRepository.cs",
+              "RelativeDocumentMoniker": "PAP.Repositories\\BookAuthorRepository.cs",
+              "ToolTip": "C:\\Users\\Kendall\\source\\repos\\PAP\\PAP.Repositories\\BookAuthorRepository.cs",
+              "RelativeToolTip": "PAP.Repositories\\BookAuthorRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-25T18:56:05.343Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "RepositoryBase.cs",
+              "DocumentMoniker": "C:\\Users\\Kendall\\source\\repos\\PAP\\PAP.Repositories\\RepositoryBase.cs",
+              "RelativeDocumentMoniker": "PAP.Repositories\\RepositoryBase.cs",
+              "ToolTip": "C:\\Users\\Kendall\\source\\repos\\PAP\\PAP.Repositories\\RepositoryBase.cs",
+              "RelativeToolTip": "PAP.Repositories\\RepositoryBase.cs",
+              "ViewState": "AgIAAF8AAAAAAAAAAAAnwIwAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-25T18:53:06.122Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "DataAccess.cs",
+              "DocumentMoniker": "C:\\Users\\Kendall\\source\\repos\\PAP\\PAP.DataAccess\\DataAccess.cs",
+              "RelativeDocumentMoniker": "PAP.DataAccess\\DataAccess.cs",
+              "ToolTip": "C:\\Users\\Kendall\\source\\repos\\PAP\\PAP.DataAccess\\DataAccess.cs",
+              "RelativeToolTip": "PAP.DataAccess\\DataAccess.cs",
+              "ViewState": "AgIAABcAAAAAAAAAAAAAABcAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-25T18:48:01.478Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "packages.config",
+              "DocumentMoniker": "C:\\Users\\Kendall\\source\\repos\\PAP\\PAP.DataAccess\\packages.config",
+              "RelativeDocumentMoniker": "PAP.DataAccess\\packages.config",
+              "ToolTip": "C:\\Users\\Kendall\\source\\repos\\PAP\\PAP.DataAccess\\packages.config",
+              "RelativeToolTip": "PAP.DataAccess\\packages.config",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
+              "WhenOpened": "2026-10-25T18:47:49.562Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "AddressRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Kendall\\source\\repos\\PAP\\PAP.Repositories\\AddressRepository.cs",
+              "RelativeDocumentMoniker": "PAP.Repositories\\AddressRepository.cs",
+              "ToolTip": "C:\\Users\\Kendall\\source\\repos\\PAP\\PAP.Repositories\\AddressRepository.cs",
+              "RelativeToolTip": "PAP.Repositories\\AddressRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-25T18:46:00.777Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "AuthorManager.cs",
+              "DocumentMoniker": "C:\\Users\\Kendall\\source\\repos\\PAP\\PAP.Business\\AuthorManager.cs",
+              "RelativeDocumentMoniker": "PAP.Business\\AuthorManager.cs",
+              "ToolTip": "C:\\Users\\Kendall\\source\\repos\\PAP\\PAP.Business\\AuthorManager.cs",
+              "RelativeToolTip": "PAP.Business\\AuthorManager.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-25T18:06:39.731Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

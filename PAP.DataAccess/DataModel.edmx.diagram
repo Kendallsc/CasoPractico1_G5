@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="f09b35283ad3476eb60e3d8462afb800" Name="Diagram1">
+        <EntityTypeShape EntityType="BookStoreDBModel.Address" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BookStoreDBModel.Author" Width="1.5" PointX="3.5" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BookStoreDBModel.BookAuthor" Width="1.5" PointX="6.25" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BookStoreDBModel.Book" Width="1.5" PointX="9.0" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BookStoreDBModel.CartItem" Width="1.5" PointX="11.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BookStoreDBModel.Category" Width="1.5" PointX="0.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BookStoreDBModel.Customer" Width="1.5" PointX="3.5" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BookStoreDBModel.Employee" Width="1.5" PointX="6.25" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BookStoreDBModel.Genre" Width="1.5" PointX="9.0" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BookStoreDBModel.Inventory" Width="1.5" PointX="11.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BookStoreDBModel.OrderItem" Width="1.5" PointX="0.75" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BookStoreDBModel.Order" Width="1.5" PointX="3.5" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BookStoreDBModel.Payment" Width="1.5" PointX="6.25" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BookStoreDBModel.Publisher" Width="1.5" PointX="9.0" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BookStoreDBModel.PurchaseOrderItem" Width="1.5" PointX="11.75" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BookStoreDBModel.PurchaseOrder" Width="1.5" PointX="0.75" PointY="12.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BookStoreDBModel.Review" Width="1.5" PointX="3.5" PointY="12.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BookStoreDBModel.Role" Width="1.5" PointX="6.25" PointY="12.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BookStoreDBModel.ShoppingCart" Width="1.5" PointX="9.0" PointY="12.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BookStoreDBModel.Supplier" Width="1.5" PointX="11.75" PointY="12.75" IsExpanded="true" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
