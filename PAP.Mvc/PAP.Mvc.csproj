@@ -130,6 +130,7 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LibraryController.cs" />
     <Compile Include="Controllers\CrudControllerBase.cs" />
+    <Compile Include="Controllers\AdminController.cs" />
     <Compile Include="Controllers\AddressesController.cs" />
     <Compile Include="Controllers\AuthorsController.cs" />
     <Compile Include="Controllers\BookAuthorsController.cs" />
@@ -219,6 +220,7 @@
     <Content Include="Views\Shared\_DeleteModal.cshtml" />
     <Content Include="Views\Shared\_DetailModal.cshtml" />
     <Content Include="Scripts\crud.js" />
+    <Content Include="Views\Admin\Index.cshtml" />
     <Content Include="Views\Addresses\Index.cshtml" />
     <Content Include="Views\Authors\Index.cshtml" />
     <Content Include="Views\BookAuthors\Index.cshtml" />
@@ -279,6 +281,10 @@
     <ProjectReference Include="..\PAP.DataAccess\PAP.DataAccess.csproj">
       <Project>{b9b34359-9d35-4cb6-b78a-4534016230e5}</Project>
       <Name>PAP.DataAccess</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PAP.Generators\PAP.Generators.csproj">
+      <Project>{451E1890-ECB4-4335-9BF6-E3B431F7A91A}</Project>
+      <Name>PAP.Generators</Name>
     </ProjectReference>
     <ProjectReference Include="..\PAP.Models\PAP.Models.csproj">
       <Project>{FD2A49BA-12B1-4B7D-B59F-5BA8CA98749B}</Project>
