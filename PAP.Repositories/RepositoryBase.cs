@@ -34,6 +34,17 @@ namespace PAP.Repositories
         void Add(T entity);
 
         /// <summary>
+        /// Adds many entities to the database with a single save (used for bulk generation).
+        /// </summary>
+        /// <param name="entities">The entities to add</param>
+        void AddRange(IEnumerable<T> entities);
+
+        /// <summary>
+        /// Returns how many rows the table currently has.
+        /// </summary>
+        int Count();
+
+        /// <summary>
         /// Updates an existing entity in the database.
         /// </summary>
         /// <param name="entity">The entity to update</param>
@@ -104,6 +115,27 @@ namespace PAP.Repositories
         {
             _set.Add(entity);
             Save();
+        }
+
+        /// <summary>
+        /// Adds many entities and saves them with a single SaveChanges (registros en masa).
+        /// </summary>
+        /// <param name="entities">The entities to add</param>
+        public void AddRange(IEnumerable<T> entities)
+        {
+            if (entities == null)
+                throw new ArgumentNullException("entities");
+
+            _set.AddRange(entities);
+            Save();
+        }
+
+        /// <summary>
+        /// Returns how many rows the table currently has.
+        /// </summary>
+        public int Count()
+        {
+            return _set.Count();
         }
 
         /// <summary>
