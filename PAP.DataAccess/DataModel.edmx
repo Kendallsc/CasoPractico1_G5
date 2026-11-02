@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="BookStoreDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="BookStoreDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="Addresses">
           <Key>
             <PropertyRef Name="Id" />
@@ -29,7 +29,7 @@
           <Property Name="Biography" Type="nvarchar(max)" />
           <Property Name="BirthDate" Type="date" />
           <Property Name="Country" Type="nvarchar" MaxLength="100" />
-          <Property Name="CreatedAt" Type="datetime2" Nullable="false" Precision="7" />
+          <Property Name="CreatedAt" Type="datetime2" Precision="7" Nullable="false" />
         </EntityType>
         <EntityType Name="BookAuthors">
           <Key>
@@ -53,19 +53,19 @@
           <Property Name="PublicationDate" Type="date" />
           <Property Name="Height" Type="decimal" Precision="10" Scale="2" />
           <Property Name="Width" Type="decimal" Precision="10" Scale="2" />
-          <Property Name="Price" Type="decimal" Nullable="false" Precision="18" Scale="2" />
+          <Property Name="Price" Type="decimal" Precision="18" Scale="2" Nullable="false" />
           <Property Name="IsBestSeller" Type="bit" Nullable="false" />
           <Property Name="Genre" Type="nvarchar" MaxLength="100" />
           <Property Name="IsInStock" Type="bit" Nullable="false" />
-          <Property Name="CreatedAt" Type="datetime2" Nullable="false" Precision="7" />
-          <Property Name="UpdatedAt" Type="datetime2" Nullable="false" Precision="7" />
+          <Property Name="CreatedAt" Type="datetime2" Precision="7" Nullable="false" />
+          <Property Name="UpdatedAt" Type="datetime2" Precision="7" Nullable="false" />
           <Property Name="PublisherId" Type="int" />
           <Property Name="CategoryId" Type="int" />
           <Property Name="GenreId" Type="int" />
           <Property Name="ISBN" Type="nvarchar" MaxLength="20" />
           <Property Name="Pages" Type="int" />
           <Property Name="Language" Type="nvarchar" MaxLength="50" />
-          <Property Name="CoverImageUrl" Type="nvarchar" MaxLength="500" />
+          <Property Name="CoverImageUrl" Type="nvarchar" MaxLength="1024" />
         </EntityType>
         <EntityType Name="CartItems">
           <Key>
@@ -75,7 +75,7 @@
           <Property Name="CartId" Type="int" Nullable="false" />
           <Property Name="BookId" Type="int" Nullable="false" />
           <Property Name="Quantity" Type="int" Nullable="false" />
-          <Property Name="AddedAt" Type="datetime2" Nullable="false" Precision="7" />
+          <Property Name="AddedAt" Type="datetime2" Precision="7" Nullable="false" />
         </EntityType>
         <EntityType Name="Categories">
           <Key>
@@ -97,8 +97,8 @@
           <Property Name="Phone" Type="nvarchar" MaxLength="30" />
           <Property Name="BirthDate" Type="date" />
           <Property Name="IsActive" Type="bit" Nullable="false" />
-          <Property Name="CreatedAt" Type="datetime2" Nullable="false" Precision="7" />
-          <Property Name="UpdatedAt" Type="datetime2" Nullable="false" Precision="7" />
+          <Property Name="CreatedAt" Type="datetime2" Precision="7" Nullable="false" />
+          <Property Name="UpdatedAt" Type="datetime2" Precision="7" Nullable="false" />
         </EntityType>
         <EntityType Name="Employees">
           <Key>
@@ -111,7 +111,7 @@
           <Property Name="Email" Type="nvarchar" MaxLength="150" Nullable="false" />
           <Property Name="PasswordHash" Type="nvarchar" MaxLength="255" Nullable="false" />
           <Property Name="IsActive" Type="bit" Nullable="false" />
-          <Property Name="CreatedAt" Type="datetime2" Nullable="false" Precision="7" />
+          <Property Name="CreatedAt" Type="datetime2" Precision="7" Nullable="false" />
         </EntityType>
         <EntityType Name="Genres">
           <Key>
@@ -139,8 +139,8 @@
           <Property Name="OrderId" Type="int" Nullable="false" />
           <Property Name="BookId" Type="int" Nullable="false" />
           <Property Name="Quantity" Type="int" Nullable="false" />
-          <Property Name="UnitPrice" Type="decimal" Nullable="false" Precision="18" Scale="2" />
-          <Property Name="Discount" Type="decimal" Nullable="false" Precision="18" Scale="2" />
+          <Property Name="UnitPrice" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+          <Property Name="Discount" Type="decimal" Precision="18" Scale="2" Nullable="false" />
         </EntityType>
         <EntityType Name="Orders">
           <Key>
@@ -149,14 +149,14 @@
           <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="CustomerId" Type="int" Nullable="false" />
           <Property Name="ShippingAddressId" Type="int" />
-          <Property Name="OrderDate" Type="datetime2" Nullable="false" Precision="7" />
+          <Property Name="OrderDate" Type="datetime2" Precision="7" Nullable="false" />
           <Property Name="Status" Type="nvarchar" MaxLength="30" Nullable="false" />
-          <Property Name="Subtotal" Type="decimal" Nullable="false" Precision="18" Scale="2" />
-          <Property Name="TaxAmount" Type="decimal" Nullable="false" Precision="18" Scale="2" />
-          <Property Name="ShippingCost" Type="decimal" Nullable="false" Precision="18" Scale="2" />
-          <Property Name="Total" Type="decimal" Nullable="false" Precision="18" Scale="2" />
+          <Property Name="Subtotal" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+          <Property Name="TaxAmount" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+          <Property Name="ShippingCost" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+          <Property Name="Total" Type="decimal" Precision="18" Scale="2" Nullable="false" />
           <Property Name="Notes" Type="nvarchar" MaxLength="500" />
-          <Property Name="UpdatedAt" Type="datetime2" Nullable="false" Precision="7" />
+          <Property Name="UpdatedAt" Type="datetime2" Precision="7" Nullable="false" />
         </EntityType>
         <EntityType Name="Payments">
           <Key>
@@ -165,8 +165,8 @@
           <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="OrderId" Type="int" Nullable="false" />
           <Property Name="PaymentMethod" Type="nvarchar" MaxLength="30" Nullable="false" />
-          <Property Name="Amount" Type="decimal" Nullable="false" Precision="18" Scale="2" />
-          <Property Name="PaymentDate" Type="datetime2" Nullable="false" Precision="7" />
+          <Property Name="Amount" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+          <Property Name="PaymentDate" Type="datetime2" Precision="7" Nullable="false" />
           <Property Name="Status" Type="nvarchar" MaxLength="30" Nullable="false" />
           <Property Name="TransactionRef" Type="nvarchar" MaxLength="100" />
         </EntityType>
@@ -179,7 +179,7 @@
           <Property Name="Country" Type="nvarchar" MaxLength="100" />
           <Property Name="Website" Type="nvarchar" MaxLength="255" />
           <Property Name="Email" Type="nvarchar" MaxLength="150" />
-          <Property Name="CreatedAt" Type="datetime2" Nullable="false" Precision="7" />
+          <Property Name="CreatedAt" Type="datetime2" Precision="7" Nullable="false" />
         </EntityType>
         <EntityType Name="PurchaseOrderItems">
           <Key>
@@ -189,7 +189,7 @@
           <Property Name="PurchaseOrderId" Type="int" Nullable="false" />
           <Property Name="BookId" Type="int" Nullable="false" />
           <Property Name="Quantity" Type="int" Nullable="false" />
-          <Property Name="UnitCost" Type="decimal" Nullable="false" Precision="18" Scale="2" />
+          <Property Name="UnitCost" Type="decimal" Precision="18" Scale="2" Nullable="false" />
         </EntityType>
         <EntityType Name="PurchaseOrders">
           <Key>
@@ -197,10 +197,10 @@
           </Key>
           <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="SupplierId" Type="int" Nullable="false" />
-          <Property Name="OrderDate" Type="datetime2" Nullable="false" Precision="7" />
+          <Property Name="OrderDate" Type="datetime2" Precision="7" Nullable="false" />
           <Property Name="ExpectedDate" Type="date" />
           <Property Name="Status" Type="nvarchar" MaxLength="30" Nullable="false" />
-          <Property Name="TotalCost" Type="decimal" Nullable="false" Precision="18" Scale="2" />
+          <Property Name="TotalCost" Type="decimal" Precision="18" Scale="2" Nullable="false" />
         </EntityType>
         <EntityType Name="Reviews">
           <Key>
@@ -211,7 +211,7 @@
           <Property Name="CustomerId" Type="int" Nullable="false" />
           <Property Name="Rating" Type="tinyint" Nullable="false" />
           <Property Name="Comment" Type="nvarchar" MaxLength="1000" />
-          <Property Name="CreatedAt" Type="datetime2" Nullable="false" Precision="7" />
+          <Property Name="CreatedAt" Type="datetime2" Precision="7" Nullable="false" />
         </EntityType>
         <EntityType Name="Roles">
           <Key>
@@ -226,8 +226,8 @@
           </Key>
           <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="CustomerId" Type="int" Nullable="false" />
-          <Property Name="CreatedAt" Type="datetime2" Nullable="false" Precision="7" />
-          <Property Name="UpdatedAt" Type="datetime2" Nullable="false" Precision="7" />
+          <Property Name="CreatedAt" Type="datetime2" Precision="7" Nullable="false" />
+          <Property Name="UpdatedAt" Type="datetime2" Precision="7" Nullable="false" />
         </EntityType>
         <EntityType Name="Suppliers">
           <Key>
@@ -599,8 +599,7 @@
             <End Role="ShoppingCarts" EntitySet="ShoppingCarts" />
           </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="BookStoreDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -669,7 +668,7 @@
           <Property Name="ISBN" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
           <Property Name="Pages" Type="Int32" />
           <Property Name="Language" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="CoverImageUrl" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="CoverImageUrl" Type="String" MaxLength="1024" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="Category1" Relationship="Self.FK_Books_Categories" FromRole="Books" ToRole="Categories" />
           <NavigationProperty Name="Genre1" Relationship="Self.FK_Books_Genres" FromRole="Books" ToRole="Genres" />
           <NavigationProperty Name="Publisher1" Relationship="Self.FK_Books_Publishers" FromRole="Books" ToRole="Publishers" />

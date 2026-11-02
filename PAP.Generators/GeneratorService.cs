@@ -23,6 +23,15 @@ namespace PAP.Generators
         {
             get { return Count > 0; }
         }
+        public bool CanGenerate
+        {
+            get
+            {
+                return !HasData
+                    && MissingDependencies != null
+                    && !MissingDependencies.Any();
+            }
+        }
     }
 
     /// <summary>

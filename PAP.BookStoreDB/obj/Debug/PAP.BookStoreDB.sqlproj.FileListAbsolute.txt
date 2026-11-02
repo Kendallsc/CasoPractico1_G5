@@ -8,3 +8,9 @@ C:\Users\Kendall\source\repos\PAP\PAP.BookStoreDB\obj\Debug\postdeploy.sql
 C:\Users\Kendall\source\repos\PAP\PAP.BookStoreDB\obj\Debug\predeploy.sql
 C:\Users\Kendall\source\repos\PAP\PAP.BookStoreDB\obj\Debug\PAP.BookStoreDB.dll
 C:\Users\Kendall\source\repos\PAP\PAP.BookStoreDB\obj\Debug\PAP.BookStoreDB.pdb
+C:\Users\jorge\source\repos\CasoPractico1_G5\PAP.BookStoreDB\bin\Debug\PAP.BookStoreDB.dacpac
+C:\Users\jorge\source\repos\CasoPractico1_G5\PAP.BookStoreDB\bin\Debug\PAP.BookStoreDB.dll
+C:\Users\jorge\source\repos\CasoPractico1_G5\PAP.BookStoreDB\bin\Debug\PAP.BookStoreDB.pdb
+C:\Users\jorge\source\repos\CasoPractico1_G5\PAP.BookStoreDB\obj\Debug\PAP.BookStoreDB.sqlproj.AssemblyReference.cache
+C:\Users\jorge\source\repos\CasoPractico1_G5\PAP.BookStoreDB\obj\Debug\PAP.BookStoreDB.dll
+C:\Users\jorge\source\repos\CasoPractico1_G5\PAP.BookStoreDB\obj\Debug\PAP.BookStoreDB.pdb

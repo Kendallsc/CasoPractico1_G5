@@ -39,7 +39,31 @@
                             {
                                 @Html.AntiForgeryToken()
                                 <input type="hidden" name="entity" value="@row.EntityName" />
-                                <button type="submit" class="btn btn-primary btn-sm">Generar</button>
+                                if (row.CanGenerate)
+                                {
+                                    <button type="submit" class="btn btn-primary btn-sm">
+                                        Generar
+                                    </button>
+                                }
+                                else
+                                {
+                                    <button type="submit" class="btn btn-secondary btn-sm" disabled>
+                                        Generar
+                                    </button>
+
+                                    if (row.HasData)
+                                    {
+                                        <div class="small text-muted mt-1">
+                                            Esta tabla ya tiene datos.
+                                        </div>
+                                    }
+                                    else
+                                    {
+                                        <div class="small text-muted mt-1">
+                                            Primero genere: @string.Join(", ", row.MissingDependencies.Select(d => "dbo." + d))
+                                        </div>
+                                    }
+                                }
                             }
                         </td>
                     </tr>

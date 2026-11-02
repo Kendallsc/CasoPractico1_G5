@@ -33,9 +33,11 @@ namespace PAP.DataAccess
         public string Notes { get; set; }
         public System.DateTime UpdatedAt { get; set; }
     
-        public virtual ICollection<OrderItem> OrderItems { get; set; }
-        public virtual ICollection<Payment> Payments { get; set; }
         public virtual Address Address { get; set; }
         public virtual Customer Customer { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<OrderItem> OrderItems { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Payment> Payments { get; set; }
     }
 }

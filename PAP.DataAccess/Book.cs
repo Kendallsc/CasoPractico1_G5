@@ -49,14 +49,20 @@ namespace PAP.DataAccess
         public string Language { get; set; }
         public string CoverImageUrl { get; set; }
     
-        public virtual ICollection<BookAuthor> BookAuthors { get; set; }
-        public virtual ICollection<CartItem> CartItems { get; set; }
-        public virtual ICollection<Inventory> Inventories { get; set; }
-        public virtual ICollection<OrderItem> OrderItems { get; set; }
-        public virtual ICollection<PurchaseOrderItem> PurchaseOrderItems { get; set; }
-        public virtual ICollection<Review> Reviews { get; set; }
         public virtual Category Category1 { get; set; }
         public virtual Genre Genre1 { get; set; }
         public virtual Publisher Publisher1 { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<BookAuthor> BookAuthors { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<CartItem> CartItems { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Inventory> Inventories { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<OrderItem> OrderItems { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<PurchaseOrderItem> PurchaseOrderItems { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Review> Reviews { get; set; }
     }
 }

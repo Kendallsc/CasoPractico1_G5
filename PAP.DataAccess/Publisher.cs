@@ -27,6 +27,7 @@ namespace PAP.DataAccess
         public string Email { get; set; }
         public System.DateTime CreatedAt { get; set; }
     
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Book> Books { get; set; }
     }
 }

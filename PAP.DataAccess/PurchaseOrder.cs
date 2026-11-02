@@ -27,7 +27,8 @@ namespace PAP.DataAccess
         public string Status { get; set; }
         public decimal TotalCost { get; set; }
     
-        public virtual ICollection<PurchaseOrderItem> PurchaseOrderItems { get; set; }
         public virtual Supplier Supplier { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<PurchaseOrderItem> PurchaseOrderItems { get; set; }
     }
 }

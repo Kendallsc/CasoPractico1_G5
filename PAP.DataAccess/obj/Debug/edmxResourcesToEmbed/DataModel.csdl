@@ -65,7 +65,7 @@
     <Property Name="ISBN" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
     <Property Name="Pages" Type="Int32" />
     <Property Name="Language" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-    <Property Name="CoverImageUrl" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="CoverImageUrl" Type="String" MaxLength="1024" FixedLength="false" Unicode="true" />
     <NavigationProperty Name="Category1" Relationship="Self.FK_Books_Categories" FromRole="Books" ToRole="Categories" />
     <NavigationProperty Name="Genre1" Relationship="Self.FK_Books_Genres" FromRole="Books" ToRole="Genres" />
     <NavigationProperty Name="Publisher1" Relationship="Self.FK_Books_Publishers" FromRole="Books" ToRole="Publishers" />
